@@ -14,15 +14,16 @@
 
 
 <style>
-    .wrapper a {
+    .wrapper >a {
         font-size: 30px;
         text-transform: capitalize;
     }
 
-    .wrapper button {
+    .wrapper >button {
         margin-bottom: 25px;
         width: 300px;
         height: 45px;
+        font-size: 1.25em;
     }
 </style>
 
@@ -44,31 +45,87 @@
         <a href="contacts.html" style="display: block; margin-bottom: 20px;">
             Контакты
         </a>
+        <a href="search.html" style="display: block; margin-bottom: 20px;">
+            Поиск
+        </a>
+        <a href="favourite.html" style="display: block; margin-bottom: 20px;">
+            Мои закладки
+        </a>
+        <a href="text.html" style="display: block; margin-bottom: 20px;">
+            Текстовая страница
+        </a>
 
 
 
 
-<!--        <button style="border: 2px solid #000;margin-bottom: 20px;" data-bs-toggle="modal" data-bs-target="#quickOrder">-->
-<!--            Быстрый заказ-->
-<!--        </button>-->
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-modal="orderModal">
+            Готовы сделать заказ
+        </button>
 
     </div>
 
-    <div class="modal" id="quickOrder" aria-hidden="true">
-    <div class="modal-dialog">
-        <button type="button" class="modal__close" data-bs-dismiss="modal" aria-label="Close">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.55401 10.5L2 2.94599L2.94599 2L10.5 9.55401L18.054 2L19 2.94599L11.446 10.5L19 18.054L18.054 19L10.5 11.446L2.94599 19L2 18.054L9.55401 10.5Z" fill="#333333"/>
+    <div class="modal" id="orderModal">
+    <div class="modal__bg _close-modal"></div>
+    <div class="modal__dialog">
+        <button class="modal__close _close-modal">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M23.8263 8.82633L21.1738 6.17383L15.0001 12.3488L8.82633 6.17383L6.17383 8.82633L12.3488 15.0001L6.17383 21.1738L8.82633 23.8263L15.0001 17.6513L21.1738 23.8263L23.8263 21.1738L17.6513 15.0001L23.8263 8.82633Z" fill="#717171"/>
             </svg>
         </button>
+        <div class="modal__top">
+            <div class="modal__title">
+                Готовы сделать заказ
+            </div>
+            <div class="text20">
+                заполните форму обратной связи
+            </div>
+        </div>
+        <form class="modal-form">
+            <div class="modal-form__field">
+                <fieldset class="fg _rect-before _rect-after">
+                    <input type="text">
+                    <label><span>Ваше имя</span></label>
+                </fieldset>
+            </div>
+            <div class="modal-form__field">
+                <fieldset class="fg _rect-before _rect-after">
+                    <input type="text">
+                    <label><span>ИНН организации</span></label>
+                </fieldset>
+            </div>
+            <div class="modal-form__field">
+                <fieldset class="fg _rect-before _rect-after">
+                    <input type="text">
+                    <label><span>Телефон</span></label>
+                </fieldset>
+            </div>
+            <div class="modal-form__field">
+                <fieldset class="fg _rect-before _rect-after">
+                    <input type="text">
+                    <label><span>Почта</span></label>
+                </fieldset>
+            </div>
 
 
+
+
+            <div class="modal-form__nav">
+                <button class="modal-form__btn m-btn m-btn-primary">
+                    <span>Отправить</span>
+                </button>
+            </div>
+            <div class="modal-form__confirm">
+                <div class="text14">
+                    Нажимая на кнопку, вы соглашаетесь
+                    с <a href="">политикой конфиденциальности данных</a>
+                </div>
+            </div>
+        </form>
 
     </div>
 </div>
 
 
-<!-- <div class="modal-backdrop show"></div> -->
     <!--  -->
     <script src="js/libs.min.js"></script>
 <script src="js/main.min.js"></script>
